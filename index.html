@@ -8,16 +8,16 @@
   <script src="https://kit.fontawesome.com/2523133cdd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <div class="container">
       <nav>
         <img src="images/kate-logo.png" alt="kate logo" class="logo">
         <ul class="side-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#services-section">Services</a></li>
+          <li><a href="#portfolio-section">Portfolio</a></li>
+          <li><a href="#contact-section">Contact</a></li>
           <i class="fa-solid fa-xmark"></i>
         </ul>
         <i class="fa-solid fa-bars"></i>
@@ -100,7 +100,7 @@
 
   <!-- PORTFOLIO -->
 
-  <section id="portfolio" class="portfolio">
+  <section id="portfolio-section" class="portfolio">
     <div class="container">
       <h2 class="sub-title">My Work</h2>
       <div class="work-list">
@@ -151,12 +151,13 @@
           <a href="" download class="resume-button button">Download Resume</a>
         </div>
         <div class="contact-right">
-          <form>
+          <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="submit-button button">Submit</button>
           </form>
+          <span id="msg" class="msg"></span>
         </div>
       </div>
     </div>
