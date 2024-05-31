@@ -83,7 +83,7 @@ nav ul li a:hover::after {
 /* ABOUT SECTION */
 
 .about-section {
-  padding: 80px;
+  padding-top: 80px;
   color: #ababab;
 }
 
@@ -362,4 +362,51 @@ footer p {
   background-color: #262626;
   font-weight: 300;
   margin-top: 20px;
+}
+
+/* HAMBURGER MENU */
+nav .fa-xmark, nav .fa-bars {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 700px) {
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  nav .fa-xmark, nav .fa-bars {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background-color: #ff0040;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right, 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-xmark, nav ul .fa-bars {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
 }
