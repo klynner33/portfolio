@@ -37,6 +37,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #080808;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 nav ul li {
@@ -413,10 +419,10 @@ nav .fa-xmark, nav .fa-bars {
     margin: 25px;
   }
 
-  nav ul .fa-xmark, nav ul .fa-bars {
+  nav ul .fa-xmark, nav .fa-bars {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 15px;
+    right: 25px;
     cursor: pointer;
   }
 
