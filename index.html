@@ -11,7 +11,7 @@
   <header id="header" class="header">
     <div class="container">
       <nav>
-        <img src="images/kate-logo.png" alt="kate logo" class="logo">
+        <img src="images/kate-logo.png" alt="kate logo" class="logo" loading="lazy">
         <ul class="side-menu">
           <li><a href="#header">Home</a></li>
           <li><a href="#portfolio-section">Projects</a></li>
@@ -36,7 +36,7 @@
         <h2 class="sub-title">My Work</h2>
         <div class="work-list">
           <div class="work">
-            <img src="images/bremmerconstruction-img.png" alt="computer on a table">
+            <img src="images/bremmerconstruction-img.png" alt="computer on a table" loading="lazy">
             <div class="layer">
               <h4>Bremmer Construction</h4>
               <p>Bremmer Construction was the first website I built for a client in 2023. They were looking for a simple, responsive site that would give them an online presence.</p>
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="work">
-            <img src="images/my-work-filler.jpg" alt="computer on a table">
+            <img src="images/my-work-filler.jpg" alt="computer on a table" loading="lazy">
             <div class="layer">
               <h4>Complete Concrete & Construction</h4>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis officia corrupti magni impedit ex.</p>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="work">
-            <img src="images/my-work-filler.jpg" alt="computer on a table">
+            <img src="images/my-work-filler.jpg" alt="computer on a table" loading="lazy">
             <div class="layer">
               <h4>Not Quite a Blog</h4>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis officia corrupti magni impedit ex.</p>
@@ -60,7 +60,33 @@
             </div>
           </div> 
         </div>
-        <a href="#" class="see-more-button button">See more</a>
+        <div class="work-list hidden-work">
+          <div class="work">
+            <img src="images/math-game-img.png" alt="Math Facts Game screenshot" loading="lazy">
+            <div class="layer">
+              <h4>Math Facts Game</h4>
+              <p>A math game to test your math facts skills in addition, subtraction, multiplication, and division.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/meal-app-img.png" alt="Meal Idea App screenshot" loading="lazy">
+            <div class="layer">
+              <h4>Meal Idea App</h4>
+              <p>An app built with TheMealDB API integration, to help you find meal ideas.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/rock-paper-scissors-img.png" alt="Rock, Paper, Scissors screenshot" loading="lazy">
+            <div class="layer">
+              <h4>Rock Paper Scissors</h4>
+              <p>Try to beat the computer in this Rock, Paper, Scissors game built with vanilla JavaScript.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div> 
+        </div>
+        <button class="see-more-button button">See More</button>
       </div>
     </section>
 
@@ -70,11 +96,11 @@
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="images/about-me-filler.jpg" alt="filler image">
+          <img src="images/about-me-filler.jpg" alt="filler image" loading="lazy">
         </div>
         <div class="about-col-2">
           <h2 class="sub-title">About Me</h2>
-          <p>I am a passionate front-end web developer who enjoys collaborating with clients to create visually appealing, user-friendly websites. I specialize in building websites from scratch or revamping existing ones using HTML, CSS, JavaScript, and various front-end frameworks. When I'm not coding, I enjoy exploring new technologies, spending time with family and friends, and being active outdoors or playing sports.</p><br>
+          <p>I am a passionate front-end web developer who enjoys collaborating with clients to create visually appealing, user-friendly websites. I specialize in building websites from scratch or revamping existing ones using HTML, CSS, JavaScript, and React. When I'm not coding, I enjoy exploring new technologies, spending time with family and friends, and being active outdoors or playing sports.</p><br>
           <p>Let's create something amazing together!</p>
 
           <div class="tab-titles">
@@ -87,12 +113,12 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>React</li>
-              <li>TypeScript</li>
+              <!-- <li>TypeScript</li> -->
             </ul>
           </div>
           <div class="tab-contents">
             <ul>
-              <li>For the past 3 years, I have been honing my skills in HTML, CSS, JavaScript, and various frameworks. About a year and a half ago, I transitioned into freelancing, where I have had the opportunity to build projects for several individuals and small businesses.</li>
+              <li>For the past 3 years, I have been honing my skills in HTML, CSS, JavaScript, and React. About a year and a half ago, I transitioned into freelancing, where I have had the opportunity to build projects for several individuals and small businesses.</li>
             </ul>
           </div>
         </div> 
@@ -146,8 +172,10 @@
           <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
             <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
             <button type="submit" class="submit-button button">Submit</button>
+            <div id="loading-icon" class="loading-icon"></div>
+
           </form>
           <span id="msg" class="msg"></span>
         </div>
