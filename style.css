@@ -193,7 +193,7 @@ nav ul li a:hover::after {
 /* ABOUT SECTION */
 
 .about-section {
-  padding-top: 80px;
+  padding-top: 30px;
   color: #ababab;
 }
 
@@ -205,11 +205,12 @@ nav ul li a:hover::after {
 
 .about-col-1 {
   flex-basis: 35%;
+  margin: auto;
 }
 
 .about-col-1 img {
-  width: 100%;
-  border-radius: 15px;
+  width: 70%;
+  border-radius: 25px;
 }
 
 .about-col-2 {
