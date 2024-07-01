@@ -71,34 +71,37 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-.header-img-text-container {
+.header-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin: 100px 0;
   gap: 5%;
   border: 1px solid var(--primary-color);
   border-radius: 20px;
+  padding: 30px 10px;
 }
 
-.header-img img {
+.left-header img {
   border-radius: 50%;
 }
 
-.header-img, .header-text {
-  padding: 8% 0;
+.left-header, .right-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 8% 0; */
+  /* border: 1px solid blue; */
 }
 
-.header-text p {
+.right-header p {
   font-size: 30px;
 }
 
-.header-text h1 {
+.right-header h1 {
   font-size: 60px;
   margin-top: 20px;
-}
-
-.header-text h1 {
   color: var(--primary-color);
 }
 
@@ -132,6 +135,7 @@ nav ul li a:hover::after {
   width: 100%;
   height: 0;
   background: linear-gradient(rgba(0,0,0,0.6), var(--primary-color));
+  /* background-color: var(--primary-color); */
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -144,7 +148,10 @@ nav ul li a:hover::after {
   padding: 0 40px;
   text-align: center;
   font-size: 14px;
-  transition: height 0.5s;
+  /* transition: height 0.5s; */
+  opacity: 0;
+  transform: scale(0);
+  transition: all .4s ease-in-out;
 }
 
 .layer h4 {
@@ -171,6 +178,8 @@ nav ul li a:hover::after {
 
 .work:hover .layer {
   height: 100%;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hidden-work {
@@ -207,10 +216,7 @@ nav ul li a:hover::after {
 .about-section {
   padding: 60px 0;
   color: #ababab;
-  /* border-top: 1px solid var(--primary-color);
-  border-bottom: 1px solid var(--primary-color);
-  border-radius: 20px; */
-}
+} 
 
 .row {
   display: flex;
@@ -429,15 +435,6 @@ nav .fa-xmark, nav .fa-bars {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 700px) {
-  .header-text {
-    margin-top: 100%;
-    font-size: 16px;
-  }
-
-  .header-text h1, .header-text h1 span {
-    font-size: 30px;
-  }
-
   nav .fa-xmark, nav .fa-bars {
     display: block;
     font-size: 25px;
@@ -471,15 +468,15 @@ nav .fa-xmark, nav .fa-bars {
     font-size: 40px;
   }
 
-  .about-col-1, .about-col-2 {
+  .about-left-col, .about-right-col {
     flex-basis: 100%;
   }
 
-  .about-col-1 {
+  .about-left-col {
     margin-bottom: 30px;
   }
 
-  .about-col-2 {
+  .about-right-col {
     font-size: 14px;
   }
 
