@@ -18,7 +18,7 @@ tabLinks.forEach((tab, index) => {
 
 const closeMenuButton = document.querySelector('.fa-xmark');
 const openMenuButton = document.querySelector('.fa-bars');
-const sideMenu = document.querySelector('.side-menu');
+const sideMenu = document.querySelector('.menu');
 
 openMenuButton.addEventListener('click', () => {
   sideMenu.style.right = "0";
