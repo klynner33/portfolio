@@ -85,6 +85,7 @@ nav ul li a:hover::after {
 
 .left-header img {
   border-radius: 50%;
+  width: 90%;
 }
 
 .left-header, .right-header {
@@ -493,5 +494,15 @@ nav .fa-xmark, nav .fa-bars {
 
   .contact-left, .contact-right {
     flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .right-header h1 {
+    font-size: 40px;
+  }
+
+  .right-header p {
+    font-size: 20px;
   }
 }
